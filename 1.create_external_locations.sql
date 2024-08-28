@@ -4,13 +4,15 @@
 -- MAGIC 1. Bronze
 -- MAGIC 2. Silver
 -- MAGIC 3. Gold
+-- MAGIC
+-- MAGIC This is medallion architecture
 
 -- COMMAND ----------
 
 --Create Bronze external location linked to external storage account
 CREATE EXTERNAL LOCATION IF NOT EXISTS dbcunityexternaldl_bronze
 URL 'abfss://bronze@dbcunityexternaldl.dfs.core.windows.net/'
-WITH (STORAGE CREDENTIAL `dbcunity-ext-storage-credential`);
+WITH (STORAGE CREDENTIAL `dbcunity-ext-storage-credential`)
 
 -- COMMAND ----------
 
